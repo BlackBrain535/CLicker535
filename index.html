@@ -14,14 +14,14 @@
 	<title>Document</title>
 </head>
 <body>
-	<div class="header">
+	<div class="header" id="hh">
 		<div class="header__title">CLicker</div>
 
 	</div>
 
 
 	<div class="click">
-		<img src="https://static10.tgstat.ru/channels/_0/4f/4f8e3eeb21141e482306e3de65c16730.jpg" class="click__button">
+		<img id="buttonclick" src="https://static10.tgstat.ru/channels/_0/4f/4f8e3eeb21141e482306e3de65c16730.jpg" class="click__button">
 		
 	</div>
 
@@ -35,13 +35,128 @@
 	<div class="shop">
 		<div class="shop__list">
 			<div class="shop__dollars"><span class="dollars">0</span>$</div>
-			<div class="shop__button-dollars">1000 <br> (CLick) <br> &dArr;&dArr; <br> 1$</div>
+			<div class="shop__button-dollars">500CL=1$</div>
 		</div>
 	</div>
 
 
+	<div class="sh">
+		<div class="sh__body">
 
 
+
+			<!-- img-1 -->
+			<div class="sh__cl">
+				<div class="sh__img">
+					<img src="https://static10.tgstat.ru/channels/_0/4f/4f8e3eeb21141e482306e3de65c16730.jpg" alt=""></div>
+				<div class="sh__text" id="text1f" >1</div><br>
+				<div class="sh__button" id="button1f">-</div>
+			</div>
+
+
+
+
+
+			<!-- img-2 -->
+			<div class="sh__cl">
+				<div class="sh__img img2f">
+					<img src="https://pbs.twimg.com/profile_images/548018397120720896/8_QiVzFa.jpeg" alt=""></div>
+				<div class="sh__text" id="text2f">2</div><br>
+				<div class="sh__button" id="button2f">Buy 100$</div>	
+			</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			<!-- img-3 -->
+			<div class="sh__cl">
+				<div class="sh__img">
+					<img src="https://pixelbox.ru/wp-content/uploads/2021/04/anim-avatar-discord-92.gif" alt=""></div>
+				<div class="sh__text" id="text3f">3</div><br>
+				<div class="sh__button" id="button3f">Buy 15$</div>	
+			</div>
+
+<!-- 
+
+			<div class="sh__cl">
+				<div class="sh__img">
+					<img src="https://pixelbox.ru/wp-content/uploads/2020/12/ava-vk-cats-76.jpg" alt=""></div>
+				<div class="sh__text">4</div><br>
+				<div class="sh__button">Buy 200$</div>	
+			</div>
+
+			<div class="sh__cl">
+				<div class="sh__img">
+					<img src="https://i.pinimg.com/736x/9a/98/74/9a9874fb42789220f99a3b803048bbb1.jpg" alt=""></div>
+				<div class="sh__text">5</div><br>
+				<div class="sh__button">Buy 350$</div>	
+			</div>
+
+			<div class="sh__cl">
+				<div class="sh__img">
+					<img src="https://im0-tub-ru.yandex.net/i?id=8fda95659dbbca9cea019a8332b260bd&ref=rim&n=33&w=181&h=180" alt=""></div>
+				<div class="sh__text">6</div><br>
+				<div class="sh__button">Buy 150$</div>	
+			</div>
+
+
+
+
+			<div class="sh__cl">
+				<div class="sh__img">
+					<img src="https://avatarko.ru/img/kartinka/8/kapyushon_protivogaz_7230.jpg" alt=""></div>
+				<div class="sh__text">7</div><br>
+				<div class="sh__button">Buy 250$</div>	
+			</div>
+
+
+			<div class="sh__cl">
+				<div class="sh__img">
+					<img src="https://yt3.ggpht.com/a/AATXAJxYam_npfnIAaHg-uGiVseOEAYv93rGVBZUiUG4=s900-c-k-c0xffffffff-no-rj-mo" alt=""></div>
+				<div class="sh__text">8</div><br>
+				<div class="sh__button">Buy 400$</div>	
+			</div>
+
+
+			<div class="sh__cl">
+				<div class="sh__img">
+					<img src="https://yandex-images.clstorage.net/Rj4K9a198/2febb0-o/XHUv3j8VcR9sap1DVUAGW20IY5dAxjFFiTxDpFif_XEZU6N0Ova2Qph-wK_hR3ymDgE6kzoaRM5IHDq5KPDqbcixXtuvNPR7KTuIFyHxc4t8CHMyRQN0Efys89QZv-0wnLLwx-wRgfQ_mPd4ByAYsxvEGtf-n7DI7o1ufM8jjhvdV3xYuvGQPx0ZrUBV5nfprE0RN5JU04TvHmMVP89_Uv8jM3aMsXCFLHq0mySh6ZJ6NHukqG8A2jxpnh6PIG_ofZb--_kRwJ4fSp2Cx2e2mZ9d8pYidpAkvT_Atz6s_TDNILJ2vSARdI5rVMi3IDvAW3RLBJhu8di86z89LNCNCA5WjKlKgLNMLTs8M3Q0JthMjwL08AcxJP5cU0dez7yyH3LCFyyiEbSeGvR45SA5AHhmeKcqvjDqTgvsTh9wPjpthJwKCxNyLlw5j8PUhJYIX1zRp7AUEcafTsKlbv3Ooy_wk2dcouC0TMlnKoSyO8BL5NrlaM8SuH2ZnX9cg5wZreZfSumhABxt6P-z5dT1mW6tIUbCZJBVXT2y1w1dT9F9wJMFfLFz92xbhckkEcszajUaV0vfwevdGM4dbWPOeWynjDoIkBAdPtmfMGdF5bmvbnK2wTQjlz3-g7RdPzwijzCxlL9Rw-UdKQUZFiOYofgn-ZTrLaL7zGmsPs1wfxmfx0466MHir6wZjtAG9sfKX03ylFJW0AWef9G17w9_sH6T4SePU0N0v3i3Cgciu1GbZtj2q32wG00Jrg8N4f54PiWMWLrD43-taewzJCaU6gzNgMcht9BnHV0C57zt3DCso4I0XJChlw25dIpUINkQGLa6tTgOUgo9G38-LqDNep9WTmq7ozAtPtsfsoTntxg8ziIkYuRCN41dItd-TcwxD_HCB5yTUVa8Woca9CIpE4n2KGZa_HHaTEp-jCwAPepPVK1rKpPDfo6bDgMWZacZfa2wlUN1MkQ-voEWD0z-U" alt=""></div>
+				<div class="sh__text">9</div><br>
+				<div class="sh__button">Buy 700$</div>	
+			</div>
+
+
+			<div class="sh__cl">
+				<div class="sh__img">
+					<img src="https://yt3.ggpht.com/a/AATXAJxpy1G5bescRfBdkyg_3F6tO6bZairs9BXNQnD4=s900-c-k-c0xffffffff-no-rj-mo" alt=""></div>
+				<div class="sh__text">10</div><br>
+				<div class="sh__button">Buy 777$</div>	
+			</div>
+
+
+
+
+
+		</div>
+	</div>
+
+
+ -->
 
 
 
