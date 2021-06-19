@@ -3,13 +3,18 @@ let click = 0;
 
 
 let textclick = document.querySelector(".cl");
-textclick.textContent = click;
 let button = document.querySelector(".click__button");
+
+
+
+click = localStorage.getItem("cl");
+textclick.textContent = click;
 
 
 button.addEventListener('click', function () {
 	click++;
-	textclick.textContent = click;
+	localStorage.setItem("cl", click);
+	textclick.textContent = click;	
 });
 
 
