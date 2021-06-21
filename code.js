@@ -42,8 +42,8 @@ button.addEventListener('click', function () {
 
 
 buttondollars.addEventListener('click', function(){
-	if(click >= 500){
-		click -= 500;
+	if(click >= 100){
+		click -= 100;
 		dollars++;
 		textclick.textContent = click;
 		textdollars.textContent = dollars;
@@ -52,7 +52,7 @@ buttondollars.addEventListener('click', function(){
 		localStorage.setItem("click", click);
 	}
 	else{
-		let r = 500 - click;
+		let r = 100 - click;
 		alert("Вам не хватает" + r + 'CL')
 	}
 });
@@ -87,20 +87,58 @@ buttondollars.addEventListener('click', function(){
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+//Shop
+
+
+
+
+//check
+//f = отвечает за то куплен ли обьект или нет
+//ff  = 'Buy', '+', '-'
+ 
+
+
+
+//imgclickbutton
 let buttonclick = document.querySelector("#buttonclick");
 
 
 
+//imgclick
+let imgclick = 'https://static10.tgstat.ru/channels/_0/4f/4f8e3eeb21141e482306e3de65c16730.jpg';
+if(localStorage.getItem('imgclick') === null){
+	localStorage.setItem('imgclick', imgclick);
+
+}
+imgclick = localStorage.getItem('imgclick');
+buttonclick.src = imgclick;
 
 
 
+
+
+
+
+
+
+
+
+//img-1
+
+//img-loading-check-1
 let button1f = document.querySelector("#button1f");
-
-
 let check1ff = '-';
-
-
-
 if(localStorage.getItem("check1ff") === null){
 	localStorage.setItem("check1ff", check1ff);
 	console.log("true1");
@@ -109,6 +147,8 @@ check1ff = localStorage.getItem("check1ff");
 button1f.textContent = check1ff;
 
 
+
+//img-button-1
 document.querySelector("#button1f").onclick = function(){
 	if(check1ff === '+'){
 
@@ -132,16 +172,50 @@ document.querySelector("#button1f").onclick = function(){
 			ColorGreen('text3f');
 		}
 
-		buttonclick.src = 'https://static10.tgstat.ru/channels/_0/4f/4f8e3eeb21141e482306e3de65c16730.jpg';
+		if(check4f === 'true'){
+			check4ff = '+';
+			button4f.textContent = check4ff;
+			localStorage.setItem("check4ff", check4ff);
+			ColorGreen('text4f');
+		}
+
+
+
+
+
+		if(check5f === 'true'){
+			check5ff = '+';
+			button5f.textContent = check5ff;
+			localStorage.setItem("check5ff", check5ff);
+			ColorGreen('text5f');
+		}
+
+
+
+
+		if(check6f === 'true'){
+			check6ff = '+';
+			button6f.textContent = check6ff;
+			localStorage.setItem("check6ff", check6ff);
+			ColorGreen('text6f');
+		}
+	
+			
+
+
+		imgclick = 'https://static10.tgstat.ru/channels/_0/4f/4f8e3eeb21141e482306e3de65c16730.jpg';
+		localStorage.setItem('imgclick', imgclick);
+		buttonclick.src = imgclick;
 
 	}
 }
 
+
+//img-check-1
 if(check1ff === '+'){
 	ColorGreen('text1f');
 
 }
-
 else if(check1ff === '-'){
 	ColorYellow('text1f');
 }
@@ -152,6 +226,24 @@ else if(check1ff === '-'){
 
 
 
+
+
+
+
+
+
+
+
+
+
+//
+//
+//
+//
+//
+//
+//
+//img-2
 let check2f = 'false';
 if(localStorage.getItem("check2f") === null){
 	localStorage.setItem("check2f", check2f);
@@ -203,10 +295,15 @@ document.querySelector("#button2f").onclick = function(){
   	
 	if(check2ff === '+'){
 
+
+	
 		check1ff = '+';
 		button1f.textContent = check1ff;
 		localStorage.setItem("check1ff", check1ff);
 		ColorGreen('text1f');
+
+		
+		
 
 		check2ff = '-';
 		button2f.textContent = check2ff;
@@ -221,8 +318,36 @@ document.querySelector("#button2f").onclick = function(){
 			localStorage.setItem("check3ff", check3ff);
 			ColorGreen('text3f');
 		}
-		
-		buttonclick.src = "https://pbs.twimg.com/profile_images/548018397120720896/8_QiVzFa.jpeg";
+
+
+		if(check4f === 'true'){
+			check4ff = '+';
+			button4f.textContent = check4ff;
+			localStorage.setItem("check4ff", check4ff);
+			ColorGreen('text4f');
+		}
+
+
+
+
+		if(check5f === 'true'){
+			check5ff = '+';
+			button5f.textContent = check5ff;
+			localStorage.setItem("check5ff", check5ff);
+			ColorGreen('text5f');
+		}
+
+
+		if(check6f === 'true'){
+			check6ff = '+';
+			button6f.textContent = check6ff;
+			localStorage.setItem("check6ff", check6ff);
+			ColorGreen('text6f');
+		}
+
+		imgclick = 'https://pbs.twimg.com/profile_images/548018397120720896/8_QiVzFa.jpeg';
+		localStorage.setItem('imgclick', imgclick);
+		buttonclick.src = imgclick;
 	}
 }
 
@@ -232,6 +357,20 @@ document.querySelector("#button2f").onclick = function(){
 
 
 
+
+
+
+
+
+
+
+
+
+//
+//
+//
+//
+//img-3
 let check3f = 'false';
 if(localStorage.getItem("check3f") === null){
 	localStorage.setItem("check3f", check3f);
@@ -254,6 +393,8 @@ if(check3f === 'true'){
 	}
 }
 
+
+//img-button-3
 document.querySelector("#button3f").onclick = function(){
 	if(dollars >= 15 && check3f === 'false'){
 		dollars -= 15;
@@ -282,10 +423,14 @@ document.querySelector("#button3f").onclick = function(){
 	}
   	
 	if(check3ff === '+'){
+
+
 		check1ff = '+';
 		button1f.textContent = check1ff;
 		localStorage.setItem("check1ff", check1ff);
 		ColorGreen('text1f');
+		
+			
 
 
 		if(check2f === 'true'){
@@ -300,7 +445,38 @@ document.querySelector("#button3f").onclick = function(){
 		button3f.textContent = check3ff;
 		localStorage.setItem("check3ff", check3ff);
 		ColorYellow('text3f');
-		buttonclick.src = "https://pixelbox.ru/wp-content/uploads/2021/04/anim-avatar-discord-92.gif";
+
+
+
+		if(check4f === 'true'){
+			check4ff = '+';
+			button4f.textContent = check4ff;
+			localStorage.setItem("check4ff", check4ff);
+			ColorGreen('text4f');
+		}
+
+
+
+		if(check5f === 'true'){
+			check5ff = '+';
+			button5f.textContent = check5ff;
+			localStorage.setItem("check5ff", check5ff);
+			ColorGreen('text5f');
+		}
+
+
+
+
+		if(check6f === 'true'){
+			check6ff = '+';
+			button6f.textContent = check6ff;
+			localStorage.setItem("check6ff", check6ff);
+			ColorGreen('text6f');
+		}
+
+		imgclick = 'https://pixelbox.ru/wp-content/uploads/2021/04/anim-avatar-discord-92.gif';
+		localStorage.setItem('imgclick', imgclick);
+		buttonclick.src = imgclick;
 	}
 }
 
@@ -318,6 +494,540 @@ document.querySelector("#button3f").onclick = function(){
 
 
 
+
+
+
+
+
+
+
+
+
+//
+//
+//
+//
+//img-4
+let check4f = 'false';
+if(localStorage.getItem("check4f") === null){
+	localStorage.setItem("check4f", check4f);
+
+}
+check4f = localStorage.getItem("check4f");
+
+let check4ff = 'Buy 10$'
+if(localStorage.getItem("check4ff") === null){
+	localStorage.setItem("check4ff", check4ff);
+
+}
+check4ff = localStorage.getItem("check4ff");
+button4f.textContent = check4ff;
+
+if(check4f === 'true'){
+	ColorGreen('text4f');
+	if(check4ff === '-'){
+		ColorYellow('text4f');
+	}
+}
+
+
+//img-button-4
+document.querySelector("#button4f").onclick = function(){
+	if(dollars >= 10 && check4f === 'false'){
+		dollars -= 10;
+		textdollars.textContent = dollars;
+		ColorGreen('text4f');
+  		alert('Вы совершили покупку -10$')
+  		check4f = 'true';
+  		localStorage.setItem("check4f", check4f);
+  		console.log(localStorage.getItem("check4f"));
+  		check4ff = '+';
+  		localStorage.setItem("check4ff", check4ff);
+  		button4f.textContent = check4ff;
+
+	}
+
+	else if(check4f === 'true'){
+		ColorGreen('text4f');
+		check4ff = '+';
+		button4f.textContent = check4ff;
+		localStorage.setItem("check4ff", check4ff);
+	}
+
+	else{
+		let r = 10 - dollars;
+		alert('Вам не хватает ' + r + '$!!!')
+	}
+  	
+	if(check4ff === '+'){
+		console.log('Абоба');
+
+		check1ff = '+';
+		button1f.textContent = check1ff;
+		localStorage.setItem("check1ff", check1ff);
+		ColorGreen('text1f');
+
+			
+
+		if(check2f == 'true'){
+			check2ff = '+';
+			button2f.textContent = check2ff;
+			localStorage.setItem("check2ff", check2ff);
+			ColorGreen('text2f');	
+		}
+			
+			
+		if(check3f == 'true'){
+			check3ff = '+';
+			button3f.textContent = check3ff;
+			localStorage.setItem("check3ff", check3ff);
+			ColorGreen('text3f');
+		}
+			
+
+		check4ff = '-';
+		button4f.textContent = check4ff;
+		localStorage.setItem("check4ff", check4ff);
+		ColorYellow('text4f');
+
+		
+
+		if(check5f === 'true'){
+			check5ff = '+';
+			button5f.textContent = check5ff;
+			localStorage.setItem("check5ff", check5ff);
+			ColorGreen('text5f');
+		}
+
+
+
+
+
+
+
+		if(check6f === 'true'){
+			check6ff = '+';
+			button6f.textContent = check6ff;
+			localStorage.setItem("check6ff", check6ff);
+			ColorGreen('text6f');
+		}
+		
+
+
+
+		imgclick = 'https://yt3.ggpht.com/ytc/AAUvwnhOT0-pW0jjV1YEzEiNt-Yb_4auS-P-5oIqZslV=s900-c-k-c0x00ffffff-no-rj';
+		localStorage.setItem('imgclick', imgclick);
+		buttonclick.src = imgclick;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//
+//
+//
+//
+//img-5
+let check5f = 'false';
+if(localStorage.getItem("check5f") === null){
+	localStorage.setItem("check5f", check5f);
+
+}
+check5f = localStorage.getItem("check5f");
+
+let check5ff = 'Buy 15$'
+if(localStorage.getItem("check5ff") === null){
+	localStorage.setItem("check5ff", check5ff);
+
+}
+check5ff = localStorage.getItem("check5ff");
+button5f.textContent = check5ff;
+
+if(check5f === 'true'){
+	ColorGreen('text5f');
+	if(check5ff === '-'){
+		ColorYellow('text5f');
+	}
+}
+
+
+//img-button-5
+document.querySelector("#button5f").onclick = function(){
+	if(dollars >= 15 && check5f === 'false'){
+		dollars -= 15;
+		textdollars.textContent = dollars;
+		ColorGreen('text5f');
+  		alert('Вы совершили покупку -15$')
+  		check5f = 'true';
+  		localStorage.setItem("check5f", check5f);
+  		console.log(localStorage.getItem("check5f"));
+  		check5ff = '+';
+  		localStorage.setItem("check5ff", check5ff);
+  		button5f.textContent = check5ff;
+
+	}
+
+	else if(check5f === 'true'){
+		ColorGreen('text5f');
+		check5ff = '+';
+		button5f.textContent = check5ff;
+		localStorage.setItem("check5ff", check5ff);
+	}
+
+	else{
+		let r = 15 - dollars;
+		alert('Вам не хватает ' + r + '$!!!')
+	}
+  	
+	if(check5ff === '+'){
+		
+
+		check1ff = '+';
+		button1f.textContent = check1ff;
+		localStorage.setItem("check1ff", check1ff);
+		ColorGreen('text1f');
+
+			
+
+		if(check2f == 'true'){
+			check2ff = '+';
+			button2f.textContent = check2ff;
+			localStorage.setItem("check2ff", check2ff);
+			ColorGreen('text2f');	
+		}
+			
+			
+		if(check3f == 'true'){
+			check3ff = '+';
+			button3f.textContent = check3ff;
+			localStorage.setItem("check3ff", check3ff);
+			ColorGreen('text3f');
+		}
+			
+		if(check4f === 'true'){
+			check4ff = '+';
+			button4f.textContent = check4ff;
+			localStorage.setItem("check4ff", check4ff);
+			ColorGreen('text4f');
+		}
+		
+
+
+		check5ff = '-';
+		button5f.textContent = check5ff;
+		localStorage.setItem("check5ff", check5ff);
+		ColorYellow('text5f');
+			
+
+
+
+
+		if(check6f === 'true'){
+			check6ff = '+';
+			button6f.textContent = check6ff;
+			localStorage.setItem("check6ff", check6ff);
+			ColorGreen('text6f');
+		}
+
+
+		imgclick = 'https://s1.tchkcdn.com/i/9/1/141837_d504b159_177155582.gif';
+		localStorage.setItem('imgclick', imgclick);
+		buttonclick.src = imgclick;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//
+//
+//
+//
+//img-6
+let check6f = 'false';
+if(localStorage.getItem("check6f") === null){
+	localStorage.setItem("check6f", check6f);
+
+}
+check6f = localStorage.getItem("check6f");
+
+let check6ff = 'Buy 15$'
+if(localStorage.getItem("check6ff") === null){
+	localStorage.setItem("check6ff", check6ff);
+
+}
+check6ff = localStorage.getItem("check6ff");
+button6f.textContent = check6ff;
+
+if(check6f === 'true'){
+	ColorGreen('text6f');
+	if(check5ff === '-'){
+		ColorYellow('text6f');
+	}
+}
+
+
+//img-button-6
+document.querySelector("#button6f").onclick = function(){
+	if(dollars >= 15 && check6f === 'false'){
+		dollars -= 15;
+		textdollars.textContent = dollars;
+		ColorGreen('text6f');
+  		alert('Вы совершили покупку -15$')
+  		check6f = 'true';
+  		localStorage.setItem("check6f", check6f);
+  		console.log(localStorage.getItem("check6f"));
+  		check6ff = '+';
+  		localStorage.setItem("check6ff", check6ff);
+  		button6f.textContent = check6ff;
+
+	}
+
+	else if(check6f === 'true'){
+		ColorGreen('text6f');
+		check6ff = '+';
+		button6f.textContent = check6ff;
+		localStorage.setItem("check6ff", check6ff);
+	}
+
+	else{
+		let r = 15 - dollars;
+		alert('Вам не хватает ' + r + '$!!!')
+	}
+  	
+	if(check6ff === '+'){
+		
+
+		check1ff = '+';
+		button1f.textContent = check1ff;
+		localStorage.setItem("check1ff", check1ff);
+		ColorGreen('text1f');
+
+			
+
+		if(check2f == 'true'){
+			check2ff = '+';
+			button2f.textContent = check2ff;
+			localStorage.setItem("check2ff", check2ff);
+			ColorGreen('text2f');	
+		}
+			
+			
+		if(check3f == 'true'){
+			check3ff = '+';
+			button3f.textContent = check3ff;
+			localStorage.setItem("check3ff", check3ff);
+			ColorGreen('text3f');
+		}
+			
+		if(check4f === 'true'){
+			check4ff = '+';
+			button4f.textContent = check4ff;
+			localStorage.setItem("check4ff", check4ff);
+			ColorGreen('text4f');
+		}
+		
+
+
+		if(check5f === 'true'){
+			check5ff = '+';
+			button5f.textContent = check5ff;
+			localStorage.setItem("check5ff", check5ff);
+			ColorGreen('text5f');
+		}
+		
+
+
+		check6ff = '-';
+		button6f.textContent = check6ff;
+		localStorage.setItem("check6ff", check6ff);
+		ColorYellow('text6f');
+			
+
+		imgclick = 'https://static.wikia.nocookie.net/dcaa7390-2cfb-40f2-a610-618f5c2c2f06';
+		localStorage.setItem('imgclick', imgclick);
+		buttonclick.src = imgclick;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+chit = 'true';
+
+
+if(chit){
+	document.addEventListener('keydown', function(){
+		if(event.code == "KeyQ"){
+			alert("Куча долларов");
+			dollarsplus();
+		}
+		if(event.code == "KeyE"){
+			alert("Куча кликов");
+			clickplus();
+		}
+		if(event.code == "KeyR"){
+			alert("Очищение магазина");
+			deletProgress();
+		}
+		if(event.code == "KeyT"){
+			alert('Удаление всех сохранений');
+				clearall();
+			
+		}
+		if(event.code == "KeyH"){
+			alert("Q-Куча долларов, E-Куча кликов, R-Очищение магазина, T-Удаление всех сохранений");
+		}
+
+
+	});
+}
+
+	
 
 
 
@@ -347,7 +1057,7 @@ function deletProgress(){
 	localStorage.removeItem('check2ff');
 	localStorage.removeItem('check3f');
 	localStorage.removeItem('check3ff');
-	localStorage.removeItem('dollars');
+
 	
 }
 
@@ -359,6 +1069,29 @@ function clickplus(){
 	localStorage.setItem('click', click);
 }
 
+
+
+function dollarsplus(){
+	dollars = 99999;
+	textdollars.textContent = dollars;
+	localStorage.setItem('dollars', dollars);
+}
+
+
+
 function clearall(){
 	localStorage.clear();
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
